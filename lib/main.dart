@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_smart/admin/admin_dashboard.dart';
 import 'package:shop_smart/consts/theme_data.dart';
 import 'package:shop_smart/firebase_options.dart';
 import 'package:shop_smart/providers/cart_provider.dart';
@@ -11,8 +10,9 @@ import 'package:shop_smart/providers/user_provider.dart';
 import 'package:shop_smart/providers/viewed_recently_provider.dart';
 import 'package:shop_smart/providers/wishlist_provider.dart';
 import 'package:shop_smart/root_screen.dart';
-import 'package:shop_smart/screens/auth/forgot_password.dart';
 import 'package:shop_smart/screens/auth/login_screen.dart';
+import 'package:shop_smart/admin/admin_dashboard.dart';
+import 'package:shop_smart/screens/auth/forgot_password.dart';
 import 'package:shop_smart/screens/auth/register_screen.dart';
 import 'package:shop_smart/screens/cart/cart_screen.dart';
 import 'package:shop_smart/screens/edit_upload_product_form.dart';
