@@ -7,8 +7,8 @@ class AppConstants {
       "https://i.ibb.co/8r1Ny2n/20-Nike-Air-Force-1-07.png";
 
   static List<String> bannersImage = [
-    AssetsManager.banner1,
-    AssetsManager.banner2,
+    AssetsManager.banner3,
+    AssetsManager.banner4,
   ];
 
   static List<CategoriesModel> CategoriesList = [
