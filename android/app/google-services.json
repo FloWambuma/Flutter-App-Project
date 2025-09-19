@@ -1,33 +1,50 @@
 {
   "project_info": {
+<<<<<<< Updated upstream
     "project_number": "947337860520",
     "firebase_url": "https://dukaletu2-66d0b-default-rtdb.firebaseio.com",
     "project_id": "dukaletu2-66d0b",
     "storage_bucket": "dukaletu2-66d0b.firebasestorage.app"
+=======
+    "project_number": "453163281429",
+    "project_id": "e-commerce-mobile-app-49118",
+    "storage_bucket": "e-commerce-mobile-app-49118.firebasestorage.app"
+>>>>>>> Stashed changes
   },
   "client": [
     {
       "client_info": {
+<<<<<<< Updated upstream
         "mobilesdk_app_id": "1:947337860520:android:8c8e4425333eec6b07b99d",
         "android_client_info": {
           "package_name": "com.example.ecommerce_app_sat"
+=======
+        "mobilesdk_app_id": "1:453163281429:android:369ca53ad19de41adff21c",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_app"
+>>>>>>> Stashed changes
         }
       },
       "oauth_client": [
         {
+<<<<<<< Updated upstream
           "client_id": "947337860520-7bii2gevms4c5lmlfodpj9m8por8ccs3.apps.googleusercontent.com",
+=======
+          "client_id": "453163281429-upa3vujg3g6o8ia8k06aqi9se30of0bt.apps.googleusercontent.com",
+>>>>>>> Stashed changes
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBkKYCRzQCzax5nyHmqdiiBUn-r1nACMp4"
+          "current_key": "AIzaSyDSsvg9EkIDwuZ0STaYwwouQgNZZMbxrrI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
+<<<<<<< Updated upstream
               "client_id": "947337860520-7bii2gevms4c5lmlfodpj9m8por8ccs3.apps.googleusercontent.com",
               "client_type": 3
             },
@@ -36,6 +53,16 @@
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.example.mycrude"
+=======
+              "client_id": "453163281429-upa3vujg3g6o8ia8k06aqi9se30of0bt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "453163281429-foovl3gfhn35tmiqi314al41i0s1k4do.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ecommerceApp"
+>>>>>>> Stashed changes
               }
             }
           ]
@@ -44,6 +71,7 @@
     },
     {
       "client_info": {
+<<<<<<< Updated upstream
         "mobilesdk_app_id": "1:947337860520:android:0ea28a9f501f678607b99d",
         "android_client_info": {
           "package_name": "com.example.mycrude"
@@ -81,25 +109,37 @@
     {
       "client_info": {
         "mobilesdk_app_id": "1:947337860520:android:6b76abd6946bc3d607b99d",
+=======
+        "mobilesdk_app_id": "1:453163281429:android:efa80e0f4401295cdff21c",
+>>>>>>> Stashed changes
         "android_client_info": {
           "package_name": "com.example.shop_smart"
         }
       },
       "oauth_client": [
         {
+<<<<<<< Updated upstream
           "client_id": "947337860520-7bii2gevms4c5lmlfodpj9m8por8ccs3.apps.googleusercontent.com",
+=======
+          "client_id": "453163281429-upa3vujg3g6o8ia8k06aqi9se30of0bt.apps.googleusercontent.com",
+>>>>>>> Stashed changes
           "client_type": 3
         }
       ],
       "api_key": [
         {
+<<<<<<< Updated upstream
           "current_key": "AIzaSyBkKYCRzQCzax5nyHmqdiiBUn-r1nACMp4"
+=======
+          "current_key": "AIzaSyDSsvg9EkIDwuZ0STaYwwouQgNZZMbxrrI"
+>>>>>>> Stashed changes
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
+<<<<<<< Updated upstream
               "client_id": "947337860520-7bii2gevms4c5lmlfodpj9m8por8ccs3.apps.googleusercontent.com",
               "client_type": 3
             },
@@ -108,6 +148,16 @@
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.example.mycrude"
+=======
+              "client_id": "453163281429-upa3vujg3g6o8ia8k06aqi9se30of0bt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "453163281429-foovl3gfhn35tmiqi314al41i0s1k4do.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ecommerceApp"
+>>>>>>> Stashed changes
               }
             }
           ]
