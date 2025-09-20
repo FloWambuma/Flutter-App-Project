@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_smart/models/dashboardboard_model.dart';
+import 'package:shop_smart/models/dashboard_model.dart';
+import 'package:shop_smart/models/dashboard_model.dart';
 import 'package:shop_smart/providers/theme_provider.dart';
 import 'package:shop_smart/screens/auth/login_screen.dart';
 import 'package:shop_smart/services/app_manager.dart';
@@ -67,7 +68,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                 isError: false,
               );
             },
-            icon: const Icon(Icons.logout, color: Colors.redAccent),
+            icon: const Icon(Icons.logout, color: Color.fromARGB(255, 255, 151, 82)),
           ),
         ],
       ),

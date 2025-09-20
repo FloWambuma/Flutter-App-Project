@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:shop_smart/admin/manage_products_screen.dart';
 import 'package:shop_smart/screens/edit_upload_product_form.dart';
 import 'package:shop_smart/screens/inner_screen/orders/orders_screen.dart';
 import 'package:shop_smart/screens/search_screen.dart';
@@ -27,7 +28,7 @@ class DashboardButtonsModel {
       text: "inspect all products",
       imagePath: AssetsManager.cosmetics,
       onPressed: () {
-        Navigator.pushNamed(context, SearchScreen.routName);
+        Navigator.pushNamed(context, SearchScreen.routeName);
       },
     ),
     DashboardButtonsModel(
@@ -37,5 +38,12 @@ class DashboardButtonsModel {
         Navigator.pushNamed(context, OrdersScreenFree.routeName);
       },
     ),
+    DashboardButtonsModel(
+    text: "Manage Products",
+    imagePath: AssetsManager.pc,
+    onPressed: () {
+      Navigator.pushNamed(context, ManageProductsScreen.routeName);
+    },
+  ),
   ];
 }

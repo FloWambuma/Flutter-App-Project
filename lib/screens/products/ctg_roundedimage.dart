@@ -13,7 +13,7 @@ class CategoryRoundedWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, SearchScreen.routName,arguments: name),
+      onTap: () => Navigator.pushNamed(context, SearchScreen.routeName,arguments: name),
       child: Column(
         children: [
           Image.asset(image, height: 50, width: 50),

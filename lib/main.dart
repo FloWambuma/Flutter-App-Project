@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:shop_smart/admin/manage_products_screen.dart';
 import 'package:shop_smart/consts/theme_data.dart';
 import 'package:shop_smart/firebase_options.dart';
 import 'package:shop_smart/providers/cart_provider.dart';
@@ -17,18 +18,17 @@ import 'package:shop_smart/screens/auth/register_screen.dart';
 import 'package:shop_smart/screens/cart/cart_screen.dart';
 import 'package:shop_smart/screens/edit_upload_product_form.dart';
 import 'package:shop_smart/screens/home_screen.dart';
-import 'package:provider/provider.dart';
 import 'package:shop_smart/screens/inner_screen/orders/orders_screen.dart';
 import 'package:shop_smart/screens/inner_screen/products_details.dart';
 import 'package:shop_smart/screens/inner_screen/viewed_recently.dart';
 import 'package:shop_smart/screens/inner_screen/wishlist.dart';
 import 'package:shop_smart/screens/search_screen.dart';
+import 'package:shop_smart/screens/user/user_dashboard.dart'; 
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
   runApp(const MainApp());
 }
 
@@ -39,40 +39,12 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (_) {
-            return ProductsProvider();
-          },
-        ),
-        ChangeNotifierProvider(
-          create: (_) {
-            return ThemeProvider();
-          },
-        ),
-
-        ChangeNotifierProvider(
-          create: (_) {
-            return CartProvider();
-          },
-        ),
-        ChangeNotifierProvider(
-          create: (_) {
-            return WishlistProvider();
-          },
-        ),
-        ChangeNotifierProvider(
-          create: (_) {
-            return ViewedProdProvider();
-          },
-        ),
-         ChangeNotifierProvider(
-          create: (_) {
-            return UserProvider();
-          },
-        ),
-        
-        
-        
+        ChangeNotifierProvider(create: (_) => ProductsProvider()),
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => CartProvider()),
+        ChangeNotifierProvider(create: (_) => WishlistProvider()),
+        ChangeNotifierProvider(create: (_) => ViewedProdProvider()),
+        ChangeNotifierProvider(create: (_) => UserProvider()),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, child) {
@@ -82,21 +54,15 @@ class MainApp extends StatelessWidget {
               isDarktheme: themeProvider.getIsDarkTheme,
               context: context,
             ),
-
             initialRoute: FirebaseAuth.instance.currentUser == null
                 ? LoginScreen.routName
                 : RootScreen.routName,
-
             routes: {
               LoginScreen.routName: (context) => const LoginScreen(),
-
               RegisterScreen.routName: (context) => const RegisterScreen(),
-
               RootScreen.routName: (context) => const RootScreen(),
               CartScreen.routName: (context) => const CartScreen(),
-
               HomeScreen.routName: (context) => const HomeScreen(),
-
               ProductsDetailsScreen.routName: (context) =>
                   const ProductsDetailsScreen(),
               ViewedRecently.routName: (context) => const ViewedRecently(),
@@ -104,15 +70,15 @@ class MainApp extends StatelessWidget {
               OrdersScreenFree.routeName: (context) => const OrdersScreenFree(),
               ForgotPasswordScreen.routeName: (context) =>
                   const ForgotPasswordScreen(),
+              SearchScreen.routeName: (context) => const SearchScreen(),
+              DashboardScreen.routeName: (context) => const DashboardScreen(),
+              EditOrUploadProductScreen.routeName: (context) =>
+                  const EditOrUploadProductScreen(),
 
-              SearchScreen.routName: (context) => const SearchScreen(),
-               DashboardScreen.routeName: (context) => const DashboardScreen(),
-
-                 EditOrUploadProductScreen.routeName: (context) =>
-                const EditOrUploadProductScreen(),
+              // ✅ Newly added routes
+              UserDashboardScreen.routeName: (context) => const UserDashboardScreen(),
+              ManageProductsScreen.routeName: (context) => const ManageProductsScreen(),
             },
-
-            // home: SignUpScreen(),
           );
         },
       ),
