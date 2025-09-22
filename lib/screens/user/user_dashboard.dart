@@ -8,6 +8,24 @@ class UserDashboardScreen extends StatelessWidget {
   static const routeName = '/UserDashboardScreen';
   const UserDashboardScreen({super.key});
 
+  Future<void> _logout(BuildContext context) async {
+    try {
+      await FirebaseAuth.instance.signOut();
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Signed out successfully ✅")),
+        );
+        Navigator.pushReplacementNamed(context, LoginScreen.routeName);
+      }
+    } catch (e) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Error signing out: $e")),
+        );
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser;
@@ -17,20 +35,20 @@ class UserDashboardScreen extends StatelessWidget {
         title: const TitlesTextWidget(label: "User Dashboard"),
         actions: [
           if (user != null)
-            IconButton(
-              icon: const Icon(Icons.logout, color: Colors.white),
-              onPressed: () async {
-                await FirebaseAuth.instance.signOut();
-                if (context.mounted) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text("Signed out successfully ✅")),
-                  );
-                  Navigator.pushReplacementNamed(
-                    context,
-                    LoginScreen.routeName,
-                  );
-                }
-              },
+            Padding(
+              padding: const EdgeInsets.only(right: 12.0),
+              child: GestureDetector(
+                onTap: () => _logout(context),
+                child: CircleAvatar(
+                  backgroundColor: Colors.redAccent,
+                  radius: 18,
+                  child: const Icon(
+                    Icons.logout,
+                    color: Colors.white,
+                    size: 20,
+                  ),
+                ),
+              ),
             ),
         ],
         bottom: PreferredSize(
@@ -42,8 +60,7 @@ class UserDashboardScreen extends StatelessWidget {
                 Navigator.pushNamed(context, SearchScreen.routeName);
               },
               child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12),
