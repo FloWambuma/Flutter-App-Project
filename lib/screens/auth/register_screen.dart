@@ -186,7 +186,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         ),
       );
 
-      Navigator.pushReplacementNamed(context, LoginScreen.routName);
+      Navigator.pushReplacementNamed(context, LoginScreen.routeName);
     } catch (e) {
       ScaffoldMessenger.of(
         context,

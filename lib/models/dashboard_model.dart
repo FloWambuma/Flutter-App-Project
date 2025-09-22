@@ -42,7 +42,7 @@ class DashboardButtonsModel {
         // 👇 New Manage Products button
         DashboardButtonsModel(
           text: "Manage Products",
-          imagePath: AssetsManager.order, // you can replace with a better icon
+          imagePath: AssetsManager.orderImage, // you can replace with a better icon
           onPressed: () {
             Navigator.pushNamed(context, ManageProductsScreen.routeName);
           },

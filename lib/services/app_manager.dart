@@ -4,7 +4,7 @@ class AssetsManager {
   static String bagImagesPath = "assets/images/bag";
   static String bannersImagesPath = "assets/images/banners";
   static String categoriesImagesPath = "assets/images/categories";
-    static String dashboardImagesPath = "assets/images/dashboard";
+  static String dashboardImagesPath = "assets/images/dashboard";
 
   // general images
   static String forgotPassword = "$imagesPath/forgot_password.jpg";
@@ -13,7 +13,6 @@ class AssetsManager {
   static String error = "$imagesPath/error.png";
   static String addressMap = "$imagesPath/address_map.png";
   static String emptySearch = "$imagesPath/empty_search.png";
-
   static String successful = "$imagesPath/successful.png";
 
   // Profile
@@ -23,20 +22,23 @@ class AssetsManager {
   static String privacy = "$profileImagesPath/privacy.png";
   static String recent = "$profileImagesPath/recent.png";
   static String theme = "$profileImagesPath/theme.png";
+
   // Bag
   static String bagWish = "$bagImagesPath/bag_wish.png";
   static String shoppingBasket = "$bagImagesPath/shopping_basket.png";
-  static String shoppingCart = "$bagImagesPath/shopping_cart.png";
-  static String orderBag = "$bagImagesPath/order.png";
+  static String shoppingCart = "$bagImagesPath/shopping_cart.png"; // 👈 used for Inspect All Products
+  static String orderBag = "$bagImagesPath/order.png";              // 👈 used for View Orders
   static String orderSvg = "$bagImagesPath/order_svg.png";
   static String wishlistSvg = "$bagImagesPath/wishlist_svg.png";
+
   // Banners
   static String banner3 = "$bannersImagesPath/banner3.png";
   static String banner4 = "$bannersImagesPath/banner4.png";
   static String banner5 = "$bannersImagesPath/banner5.png";
+
   // Categories path
   static String mobiles = "$categoriesImagesPath/mobiles.png";
-  static String fashion = "$categoriesImagesPath/fashion.png";
+  static String fashion = "$categoriesImagesPath/fashion.png";     // 👈 used for Add a new product
   static String watch = "$categoriesImagesPath/watch.png";
   static String book = "$categoriesImagesPath/book_img.png";
   static String electronics = "$categoriesImagesPath/electronics.png";
@@ -44,8 +46,6 @@ class AssetsManager {
   static String shoes = "$categoriesImagesPath/shoes.png";
   static String pc = "$categoriesImagesPath/pc.png";
 
-  //dashboard 
-  static String order = "$dashboardImagesPath/order.png";
-  static String cloud = "$dashboardImagesPath/cloud.png";
-
+  // Dashboard
+  static String orderImage = "$dashboardImagesPath/order.png";     // 👈 used for Manage Products
 }

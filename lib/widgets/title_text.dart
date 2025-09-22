@@ -1,29 +1,39 @@
 import 'package:flutter/material.dart';
 
 class TitlesTextWidget extends StatelessWidget {
+  final String label;
+  final Color? color;
+  final double? fontSize;
+  final FontWeight? fontWeight;
+  final FontStyle? fontStyle;
+  final TextDecoration? textDecoration;
+  final int? maxLines;
+  final TextOverflow? overflow;
+
   const TitlesTextWidget({
     super.key,
     required this.label,
-    this.fontSize = 20,
     this.color,
+    this.fontSize,
+    this.fontWeight,
+    this.fontStyle,
+    this.textDecoration,
     this.maxLines,
+    this.overflow,
   });
 
-  final String label;
-  final double fontSize;
-  final Color? color;
-  final int? maxLines;
   @override
   Widget build(BuildContext context) {
     return Text(
       label,
       maxLines: maxLines,
-      // textAlign: TextAlign.justify,
+      overflow: overflow,
       style: TextStyle(
-        color: color,
-        fontSize: fontSize,
-        fontWeight: FontWeight.bold,
-        overflow: TextOverflow.ellipsis,
+        color: color ?? Colors.black,
+        fontSize: fontSize ?? 18,
+        fontWeight: fontWeight ?? FontWeight.bold,
+        fontStyle: fontStyle ?? FontStyle.normal,
+        decoration: textDecoration ?? TextDecoration.none,
       ),
     );
   }

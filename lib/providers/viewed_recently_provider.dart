@@ -4,6 +4,7 @@ import 'package:uuid/uuid.dart';
 
 class ViewedProdProvider with ChangeNotifier {
   final Map<String, ViewProdModel> _viewedProdItems = {};
+
   Map<String, ViewProdModel> get getViewedProds {
     return _viewedProdItems;
   }
@@ -16,13 +17,10 @@ class ViewedProdProvider with ChangeNotifier {
         productId: productId,
       ),
     );
+    notifyListeners();
   }
 
-  @override
-  notifyListeners();
-
-
-   void clearLocalViewedProd() {
+  void clearLocalViewedProd() {
     _viewedProdItems.clear();
     notifyListeners();
   }

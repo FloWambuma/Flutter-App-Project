@@ -43,9 +43,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:453163281429:android:efa80e0f4401295cdff21c",
+        "mobilesdk_app_id": "1:453163281429:android:4fb391e2c9f36ad3dff21c",
         "android_client_info": {
-          "package_name": "com.example.shop_smart"
+          "package_name": "com.example.my_shop"
         }
       },
       "oauth_client": [

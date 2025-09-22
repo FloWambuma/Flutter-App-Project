@@ -167,7 +167,7 @@ class _ProfileScreenState extends State<ProfileScreen>
               label: Text(user == null ? "Login" : "Logout"),
               onPressed: () async {
                 if (user == null) {
-                  Navigator.pushNamed(context, LoginScreen.routName);
+                  Navigator.pushNamed(context, LoginScreen.routeName);
                 } else {
                   await MyAppFunctions.showErrorOrWarningDialog(
                     context: context,
@@ -184,7 +184,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                       );
                       Navigator.pushReplacementNamed(
                         context,
-                        LoginScreen.routName,
+                        LoginScreen.routeName,
                       );
                     },
                     isError: false,

@@ -14,7 +14,7 @@ import 'package:shop_smart/widgets/subtitle_text.dart';
 import 'package:shop_smart/widgets/title_text.dart';
 
 class LoginScreen extends StatefulWidget {
-  static const routName = "/LoginScreen";
+  static const routeName = "/LoginScreen";
   const LoginScreen({super.key});
 
   @override

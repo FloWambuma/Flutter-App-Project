@@ -55,10 +55,10 @@ class MainApp extends StatelessWidget {
               context: context,
             ),
             initialRoute: FirebaseAuth.instance.currentUser == null
-                ? LoginScreen.routName
+                ? LoginScreen.routeName
                 : RootScreen.routName,
             routes: {
-              LoginScreen.routName: (context) => const LoginScreen(),
+              LoginScreen.routeName: (context) => const LoginScreen(),
               RegisterScreen.routName: (context) => const RegisterScreen(),
               RootScreen.routName: (context) => const RootScreen(),
               CartScreen.routName: (context) => const CartScreen(),

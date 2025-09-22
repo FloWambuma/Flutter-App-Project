@@ -62,7 +62,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                   Navigator.pushReplacementNamed(
                     context,
-                    LoginScreen.routName,
+                    LoginScreen.routeName,
                   );
                 },
                 isError: false,

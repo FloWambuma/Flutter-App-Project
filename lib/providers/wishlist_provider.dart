@@ -14,11 +14,12 @@ class WishlistProvider with ChangeNotifier {
     } else {
       _wishListItems.putIfAbsent(
         productId,
-        () =>
-            WishlistModel(wishlistId: const Uuid().v4(), productId: productId),
+        () => WishlistModel(
+          wishlistId: const Uuid().v4(),
+          productId: productId,
+        ),
       );
     }
-
     notifyListeners();
   }
 

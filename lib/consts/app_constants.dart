@@ -1,61 +1,62 @@
 import 'package:flutter/material.dart';
-import 'package:shop_smart/models/categories_model.dart';
-import 'package:shop_smart/services/app_manager.dart';
 
+/// Centralized asset paths
+class AssetsManager {
+  // Cart icons
+  static const String shoppingCart = "assets/images/cart/shopping_cart.png";
+  static const String shoppingBasket = "assets/images/cart/shopping_basket.png";
+
+  // App logo
+  static const String appLogo = "assets/images/logo/logo.png";
+
+  // Fallback placeholder
+  static const String fallbackImage = "assets/images/placeholder.png";
+
+  // Banner images
+  static const List<String> bannersImage = [
+    "assets/images/banners/banner1.png",
+    "assets/images/banners/banner2.png",
+    "assets/images/banners/banner3.png",
+    "assets/images/banners/banner4.png",
+    "assets/images/banners/banner5.png",
+  ];
+}
+
+/// Model for product categories
+class CategoryModel {
+  final String name;
+  final String image;
+
+  CategoryModel({required this.name, required this.image});
+}
+
+/// App constants for categories, safe asset helper, etc.
 class AppConstants {
-  static const String imageUrl =
-      "https://i.ibb.co/8r1Ny2n/20-Nike-Air-Force-1-07.png";
-
-  static List<String> bannersImage = [
-    AssetsManager.banner3,
-    AssetsManager.banner4,
-    AssetsManager.banner5,
+  // Categories list
+  static final List<CategoryModel> CategoriesList = [
+    CategoryModel(name: "Phones", image: "assets/images/categories/phones.png"),
+    CategoryModel(name: "Fashion", image: "assets/images/categories/fashion.png"),
+    CategoryModel(name: "Electronics", image: "assets/images/categories/electronics.png"),
+    CategoryModel(name: "Books", image: "assets/images/categories/books.png"),
+    CategoryModel(name: "Cosmetics", image: "assets/images/categories/cosmetics.png"),
   ];
 
-  static List<CategoriesModel> CategoriesList = [
-    CategoriesModel(id: "Phones", image: AssetsManager.mobiles, name: "Phones"),
-    CategoriesModel(id: "Laptops", image: AssetsManager.pc, name: "Laptops"),
-    CategoriesModel(
-      id: "Electronics",
-      image: AssetsManager.electronics,
-      name: "Electronics",
-    ),
-    CategoriesModel(id: "Watches", image: AssetsManager.watch, name: "Watches"),
-    CategoriesModel(
-      id: "Clothes",
-      image: AssetsManager.fashion,
-      name: "Clothes",
-    ),
-    CategoriesModel(id: "Shoes", image: AssetsManager.shoes, name: "Shoes"),
-    CategoriesModel(id: "Books", image: AssetsManager.book, name: "Books"),
-    CategoriesModel(
-      id: "Cosmetics",
-      image: AssetsManager.cosmetics,
-      name: "Cosmetics",
-    ),
-  ];
+  // ✅ Banner images shortcut
+  static List<String> get banners => AssetsManager.bannersImage;
 
-  
-  static List<String> categoriesList = [
-    'Phones',
-    'Laptops',
-    'Electronics',
-    'Watches',
-    'Clothes',
-    'Shoes',
-    'Books',
-    'Cosmetics',
-    "Accessories",
-  ];
-   static List<DropdownMenuItem<String>>? get categoriesDropDownList {
-    List<DropdownMenuItem<String>>? menuItem =
-        List<DropdownMenuItem<String>>.generate(
-      categoriesList.length,
-      (index) => DropdownMenuItem(
-        value: categoriesList[index],
-        child: Text(categoriesList[index]),
-      ),
-    );
-    return menuItem;
+  // ✅ Safe asset helper: returns fallback if missing
+  static String safeAsset(String? path) {
+    if (path == null || path.trim().isEmpty) return AssetsManager.fallbackImage;
+    return path;
+  }
+
+  // ✅ Categories dropdown helper (for Edit/Upload screen)
+  static List<DropdownMenuItem<String>> get categoriesDropDownList {
+    return CategoriesList.map((cat) {
+      return DropdownMenuItem<String>(
+        value: cat.name,
+        child: Text(cat.name),
+      );
+    }).toList();
   }
 }
