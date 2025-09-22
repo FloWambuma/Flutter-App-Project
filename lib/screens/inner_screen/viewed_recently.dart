@@ -9,7 +9,7 @@ import 'package:shop_smart/widgets/empty_bag.dart';
 import 'package:shop_smart/widgets/title_text.dart';
 
 class ViewedRecently extends StatelessWidget {
-  static const routName = "/ViewedRecentlyScreen";
+  static const routeName = "/ViewedRecentlyScreen";
   const ViewedRecently({super.key});
   final bool isEmpty = true;
 

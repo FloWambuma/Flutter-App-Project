@@ -15,7 +15,7 @@ import 'package:shop_smart/widgets/subtitle_text.dart';
 import 'package:shop_smart/widgets/title_text.dart';
 
 class ProfileScreen extends StatefulWidget {
-  static const routName = "/ProfileScreen";
+  static const routeName = "/ProfileScreen";
   const ProfileScreen({super.key});
 
   @override
@@ -119,14 +119,14 @@ class _ProfileScreenState extends State<ProfileScreen>
                   text: "Wishlist",
                   imagePath: AssetsManager.wishlistSvg,
                   function: () {
-                    Navigator.pushNamed(context, WishlistScreen.routName);
+                    Navigator.pushNamed(context, WishlistScreen.routeName);
                   },
                 ),
                 CustomListTile(
                   text: "Viewed recently",
                   imagePath: AssetsManager.recent,
                   function: () {
-                    Navigator.pushNamed(context, ViewedRecently.routName);
+                    Navigator.pushNamed(context, ViewedRecently.routeName);
                   },
                 ),
                 CustomListTile(

@@ -9,7 +9,7 @@ import 'package:shop_smart/widgets/empty_bag.dart';
 import 'package:shop_smart/widgets/title_text.dart';
 
 class WishlistScreen extends StatelessWidget {
-  static const routName = "/WishListScreen";
+  static const routeName = "/WishListScreen";
   const WishlistScreen({super.key});
   final bool isEmpty = true;
 

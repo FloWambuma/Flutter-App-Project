@@ -21,7 +21,7 @@ import 'package:shop_smart/widgets/subtitle_text.dart';
 import 'package:shop_smart/widgets/title_text.dart';
 
 class RegisterScreen extends StatefulWidget {
-  static const routName = "/RegisterScreen";
+  static const routeName = "/RegisterScreen";
   const RegisterScreen({super.key});
 
   @override

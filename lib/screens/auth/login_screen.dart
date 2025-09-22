@@ -82,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
       if (user.role == 'admin') {
         Navigator.pushReplacementNamed(context, DashboardScreen.routeName);
       } else {
-        Navigator.pushReplacementNamed(context, RootScreen.routName);
+        Navigator.pushReplacementNamed(context, RootScreen.routeName);
       }
     }
   } finally {
@@ -222,7 +222,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   onPressed: () async {
                                     Navigator.pushNamed(
                                       context,
-                                      RootScreen.routName,
+                                      RootScreen.routeName,
                                     );
                                   },
                                 ),
@@ -246,7 +246,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   onPressed: () {
                                     Navigator.pushNamed(
                                       context,
-                                      RegisterScreen.routName,
+                                      RegisterScreen.routeName,
                                     );
                                   },
                                   child: SizedBox(

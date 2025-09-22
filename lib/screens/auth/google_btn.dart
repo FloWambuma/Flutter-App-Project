@@ -53,7 +53,7 @@ class GoogleButton extends StatelessWidget {
         await userProvider.fetchUser();
 
         WidgetsBinding.instance.addPostFrameCallback((_) {
-          Navigator.pushReplacementNamed(context, RootScreen.routName);
+          Navigator.pushReplacementNamed(context, RootScreen.routeName);
         });
       }
     }

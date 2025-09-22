@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_smart/admin/admin_dashboard.dart';
 import 'package:shop_smart/admin/manage_products_screen.dart';
 import 'package:shop_smart/consts/theme_data.dart';
 import 'package:shop_smart/firebase_options.dart';
@@ -11,9 +13,8 @@ import 'package:shop_smart/providers/user_provider.dart';
 import 'package:shop_smart/providers/viewed_recently_provider.dart';
 import 'package:shop_smart/providers/wishlist_provider.dart';
 import 'package:shop_smart/root_screen.dart';
-import 'package:shop_smart/screens/auth/login_screen.dart';
-import 'package:shop_smart/admin/admin_dashboard.dart';
 import 'package:shop_smart/screens/auth/forgot_password.dart';
+import 'package:shop_smart/screens/auth/login_screen.dart';
 import 'package:shop_smart/screens/auth/register_screen.dart';
 import 'package:shop_smart/screens/cart/cart_screen.dart';
 import 'package:shop_smart/screens/edit_upload_product_form.dart';
@@ -23,8 +24,10 @@ import 'package:shop_smart/screens/inner_screen/products_details.dart';
 import 'package:shop_smart/screens/inner_screen/viewed_recently.dart';
 import 'package:shop_smart/screens/inner_screen/wishlist.dart';
 import 'package:shop_smart/screens/search_screen.dart';
-import 'package:shop_smart/screens/user/user_dashboard.dart'; 
-import 'package:provider/provider.dart';
+import 'package:shop_smart/screens/user/user_dashboard.dart';
+
+// ✅ Import the debug Firestore screen
+import 'package:shop_smart/screens/debug_firestore.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -56,17 +59,17 @@ class MainApp extends StatelessWidget {
             ),
             initialRoute: FirebaseAuth.instance.currentUser == null
                 ? LoginScreen.routeName
-                : RootScreen.routName,
+                : RootScreen.routeName,
             routes: {
               LoginScreen.routeName: (context) => const LoginScreen(),
-              RegisterScreen.routName: (context) => const RegisterScreen(),
-              RootScreen.routName: (context) => const RootScreen(),
+              RegisterScreen.routeName: (context) => const RegisterScreen(),
+              RootScreen.routeName: (context) => const RootScreen(),
               CartScreen.routName: (context) => const CartScreen(),
-              HomeScreen.routName: (context) => const HomeScreen(),
-              ProductsDetailsScreen.routName: (context) =>
+              HomeScreen.routeName: (context) => const HomeScreen(),
+              ProductsDetailsScreen.routeName: (context) =>
                   const ProductsDetailsScreen(),
-              ViewedRecently.routName: (context) => const ViewedRecently(),
-              WishlistScreen.routName: (context) => const WishlistScreen(),
+              ViewedRecently.routeName: (context) => const ViewedRecently(),
+              WishlistScreen.routeName: (context) => const WishlistScreen(),
               OrdersScreenFree.routeName: (context) => const OrdersScreenFree(),
               ForgotPasswordScreen.routeName: (context) =>
                   const ForgotPasswordScreen(),
@@ -74,10 +77,14 @@ class MainApp extends StatelessWidget {
               DashboardScreen.routeName: (context) => const DashboardScreen(),
               EditOrUploadProductScreen.routeName: (context) =>
                   const EditOrUploadProductScreen(),
+              UserDashboardScreen.routeName: (context) =>
+                  const UserDashboardScreen(),
+              ManageProductsScreen.routeName: (context) =>
+                  const ManageProductsScreen(),
 
-              // ✅ Newly added routes
-              UserDashboardScreen.routeName: (context) => const UserDashboardScreen(),
-              ManageProductsScreen.routeName: (context) => const ManageProductsScreen(),
+              // ✅ Added Firestore debug screen
+              FirestoreDebugScreen.routeName: (context) =>
+                  const FirestoreDebugScreen(),
             },
           );
         },

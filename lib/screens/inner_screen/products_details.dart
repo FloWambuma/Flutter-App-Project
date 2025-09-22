@@ -9,7 +9,7 @@ import 'package:shop_smart/widgets/subtitle_text.dart';
 import 'package:shop_smart/widgets/title_text.dart';
 
 class ProductsDetailsScreen extends StatefulWidget {
-  static const routName = "/ProductDetailsScreen";
+  static const routeName = "/ProductDetailsScreen";
   const ProductsDetailsScreen({super.key});
 
   @override
