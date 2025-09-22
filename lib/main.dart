@@ -26,7 +26,7 @@ import 'package:shop_smart/screens/inner_screen/wishlist.dart';
 import 'package:shop_smart/screens/search_screen.dart';
 import 'package:shop_smart/screens/user/user_dashboard.dart';
 
-// ✅ Import the debug Firestore screen
+// ✅ Debug Firestore screen
 import 'package:shop_smart/screens/debug_firestore.dart';
 
 void main() async {
@@ -73,7 +73,6 @@ class MainApp extends StatelessWidget {
               OrdersScreenFree.routeName: (context) => const OrdersScreenFree(),
               ForgotPasswordScreen.routeName: (context) =>
                   const ForgotPasswordScreen(),
-              SearchScreen.routeName: (context) => const SearchScreen(),
               DashboardScreen.routeName: (context) => const DashboardScreen(),
               EditOrUploadProductScreen.routeName: (context) =>
                   const EditOrUploadProductScreen(),
@@ -82,9 +81,16 @@ class MainApp extends StatelessWidget {
               ManageProductsScreen.routeName: (context) =>
                   const ManageProductsScreen(),
 
-              // ✅ Added Firestore debug screen
+              // ✅ Firestore debug screen
               FirestoreDebugScreen.routeName: (context) =>
                   const FirestoreDebugScreen(),
+
+              // ✅ Search screen with optional query parameter
+              SearchScreen.routeName: (context) {
+                final query =
+                    ModalRoute.of(context)?.settings.arguments as String?;
+                return SearchScreen(initialQuery: query);
+              },
             },
           );
         },
