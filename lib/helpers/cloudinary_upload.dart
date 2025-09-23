@@ -6,8 +6,8 @@ import 'package:cloudinary_public/cloudinary_public.dart';
 
 class CloudinaryService {
   static final cloudinary = CloudinaryPublic(
-    "your_cloud_name",   // 🔴 replace with your actual cloud name
-    "your_upload_preset", // 🔴 replace with your actual upload preset
+    "djtkrrqsh",   // 🔴 replace with your actual cloud name
+    "my_shop", // 🔴 replace with your actual upload preset
     cache: false,
   );
 

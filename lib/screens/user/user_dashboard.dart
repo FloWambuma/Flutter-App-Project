@@ -67,11 +67,11 @@ class UserDashboardScreen extends StatelessWidget {
                 ),
                 child: Row(
                   children: const [
-                    Icon(Icons.search, color: Colors.grey),
+                    Icon(Icons.search, color: Color.fromARGB(255, 158, 158, 158)),
                     SizedBox(width: 8),
                     Text(
                       "Search products...",
-                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                      style: TextStyle(color: Color.fromARGB(255, 158, 158, 158), fontSize: 16),
                     ),
                   ],
                 ),

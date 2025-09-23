@@ -101,8 +101,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   Future<String?> uploadImageToCloudinary(File imageFile) async {
-    final cloudName = 'dizoiw0ns';
-    final uploadPreset = 'dukaletu';
+    final cloudName = 'djtkrrqsh';
+    final uploadPreset = 'my_shop';
 
     final url = Uri.parse(
       'https://api.cloudinary.com/v1_1/$cloudName/image/upload',
